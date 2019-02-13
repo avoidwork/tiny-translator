@@ -20,11 +20,11 @@ async function translate (arg, to = "zh-Hans") {
     console.error(e.message);
   }
 
-  return result.text;
+  return result;
 }
 
 (async function () {
-  await translate("Hello, what is your name?");
+  const translated = await translate("Hello, what is your name?");
   
   // Results in...
   {
