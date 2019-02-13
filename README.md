@@ -20,21 +20,13 @@ async function translate (arg, to = "zh-Hans") {
     console.error(e.message);
   }
 
-  return result;
+  return result.text;
 }
 
 (async function () {
   const translated = await translate("Hello, what is your name?");
-  
-  // Results in...
-  {
-    "detectedLanguage": {
-      "language": "en",
-      "score": 1.0,
-    },
-    "text": "你好, 你叫什么名字？",
-    "to": "zh-Hans"
-  }
+
+  console.log(translated); // "你好, 你叫什么名字？"
 }());
 ```
 
