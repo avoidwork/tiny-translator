@@ -23,11 +23,13 @@ async function translate (arg, to = "zh-Hans") {
   return result.text;
 }
 
-...
+(async function () {
+  await translate("Hello, what is your name?");
+}());
 
-await translate("Hello, what is your name?");
+// Results in...
 
-```json
+```
 {
   "detectedLanguage": {
     "language": "en",
