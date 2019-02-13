@@ -3,10 +3,6 @@ Tiny translation library for Azure Translator Text service.
 
 [![build status](https://secure.travis-ci.org/avoidwork/tiny-translator.svg)](http://travis-ci.org/avoidwork/tiny-translator)
 
-### Configuration
-#### key
-Azure Translator Text API subscription key.
-
 ### Example
 ```javascript
 const translator = require("tiny-translator")("SUBSCRIPTION_KEY");
@@ -15,12 +11,14 @@ async function translate (arg, to = "zh-Hans") {
   let result;
   
   try {
-    result = await translator.translate({text: arg, to: to});
+    const data = await translator.translate({text: arg, to: to});
+    
+    result = data.text;
   } catch (e) {
     console.error(e.message);
   }
 
-  return result.text;
+  return result;
 }
 
 (async function () {
@@ -31,7 +29,7 @@ async function translate (arg, to = "zh-Hans") {
 ```
 
 ### API
-### constructor (subscriptionKey)
+#### factory (subscriptionKey)
 Returns an instance of Tiny Translator.
 
 #### languages (scope=translation,transliteration,dictionary)
