@@ -25,19 +25,17 @@ async function translate (arg, to = "zh-Hans") {
 
 (async function () {
   await translate("Hello, what is your name?");
+  
+  // Results in...
+  {
+    "detectedLanguage": {
+      "language": "en",
+      "score": 1.0,
+    },
+    "text": "你好, 你叫什么名字？",
+    "to": "zh-Hans"
+  }
 }());
-
-// Results in...
-
-```
-{
-  "detectedLanguage": {
-    "language": "en",
-    "score": 1.0,
-  },
-  "text": "你好, 你叫什么名字？",
-  "to": "zh-Hans"
-}
 ```
 
 ### API
