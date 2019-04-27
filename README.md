@@ -38,7 +38,7 @@ Asynchronous function which returns a list of supported languages per scope.
 #### reset ()
 Resets the translator token to empty string.
 
-#### translate ({text: '' || ['', ...], to: 'lang'[, from: 'lang', textType: 'plain' || 'html', category: 'general', profanityAction: 'NoAction' || 'Marked' || 'Deleted', profanityMarker: 'Asterisk' || 'Tag', includeAlignment: true || false, includeSentenceLength: true || false, suggestedFrom: 'lang', fromScript: 'x', toScript: 'y', allowFallback: true || false]})
+#### translate ({text: '' || [{Text: '', ...], to: 'lang'[, from: 'lang', textType: 'plain' || 'html', category: 'general', profanityAction: 'NoAction' || 'Marked' || 'Deleted', profanityMarker: 'Asterisk' || 'Tag', includeAlignment: true || false, includeSentenceLength: true || false, suggestedFrom: 'lang', fromScript: 'x', toScript: 'y', allowFallback: true || false]})
 Asynchronous function which returns a translation. 
 
 ## License
