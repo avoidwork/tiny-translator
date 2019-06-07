@@ -3,7 +3,7 @@ Tiny translation library for Azure Translator Text service.
 
 [![build status](https://secure.travis-ci.org/avoidwork/tiny-translator.svg)](http://travis-ci.org/avoidwork/tiny-translator)
 
-To escape a word from translation append # to it, e.g. "#Hello world!" would result in "Hello" not being translated.
+To escape a word from translation prepend # to it, e.g. "#Hello world!" would result in "Hello" not being translated.
 
 ### Example
 ```javascript
